@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "davinci-cms-d3d3f": {
+      "hosting": {
+        "cms": [
+          "davinci-cms-d3d3f"
+        ]
+      }
+    }
+  }
+}
