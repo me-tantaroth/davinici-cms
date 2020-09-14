@@ -1,9 +1,29 @@
 <div
-  class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1"
+  class="auth-layout uk-flex uk-flex-center uk-flex-middle uk-height-1-1"
   uk-height-viewport
 >
   <div class="uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
-    <h1>Ingreso</h1>
-    <app-auth-sign-in-form></app-auth-sign-in-form>
+    <mat-card>
+      <div *ngIf="page === 'sign-in'; else OtherPageT">
+        <h2 class="uk-heading-divider">Ingresar</h2>
+        <app-auth-sign-in-form></app-auth-sign-in-form>
+        <p class="uk-text-center">
+          <button (click)="page = 'forgot-password'" mat-button color="primary">
+            Recuperar contraseña
+          </button>
+        </p>
+      </div>
+      <ng-template #OtherPageT>
+        <div *ngIf="page === 'forgot-password'">
+          <h2 class="uk-heading-divider">Recuperar</h2>
+          <app-auth-forgot-password-form></app-auth-forgot-password-form>
+          <p class="uk-text-center">
+            <button (click)="page = 'sign-in'" mat-button color="primary">
+              Ingresar
+            </button>
+          </p>
+        </div>
+      </ng-template>
+    </mat-card>
   </div>
 </div>

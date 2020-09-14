@@ -8,7 +8,7 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: 'app-auth-sign-in-form',
+  selector: 'app-auth-forgot-password-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })

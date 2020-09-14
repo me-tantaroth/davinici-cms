@@ -1,4 +1,8 @@
-<div *ngIf="alert" [class]="'uk-alert-' + alert?.type" uk-alert="animation: uk-animation-slide-top; duration: 150">
+<div
+  *ngIf="alert"
+  [class]="'uk-alert-' + alert?.type"
+  uk-alert="animation: uk-animation-slide-top; duration: 150"
+>
   <a class="uk-alert-close" uk-close></a>
   <p>
     {{ alert?.message }}
@@ -21,19 +25,6 @@
       No es un email valido
     </mat-error>
   </mat-form-field>
-  <mat-form-field class="uk-width-1-1">
-    <mat-label>Ingresa tu constraseña</mat-label>
-    <input
-      matInput
-      type="password"
-      placeholder="P@ssw0rd"
-      formControlName="password"
-      required
-    />
-    <mat-error *ngIf="f.password && f.password.hasError('required')">
-      Debes ingresar un valor
-    </mat-error>
-  </mat-form-field>
 
   <button
     type="submit"
@@ -41,6 +32,6 @@
     color="primary"
     class="uk-align-right"
   >
-    Ingresar
+    Recodar
   </button>
 </form>
